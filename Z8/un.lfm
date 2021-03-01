@@ -1,0 +1,130 @@
+object Form1: TForm1
+  Left = 346
+  Height = 452
+  Top = 207
+  Width = 609
+  HorzScrollBar.Page = 1
+  VertScrollBar.Page = 1
+  BorderStyle = bsSizeToolWin
+  Caption = 'Расчёт периметр правильного n-угольника. '
+  ClientHeight = 432
+  ClientWidth = 609
+  Color = 11907914
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -15
+  Font.Name = 'Segoe UI Historic'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Menu = MainMenu1
+  ParentBiDiMode = False
+  LCLVersion = '2.0.6.0'
+  object n_uglov: TEdit
+    Left = 208
+    Height = 28
+    Top = 56
+    Width = 144
+    Alignment = taCenter
+    OnChange = n_uglovChange
+    TabOrder = 0
+    Text = '5'
+  end
+  object radius: TEdit
+    Left = 208
+    Height = 28
+    Top = 16
+    Width = 146
+    Alignment = taCenter
+    TabOrder = 1
+    Text = '40'
+  end
+  object Label1: TLabel
+    Left = 49
+    Height = 20
+    Top = 64
+    Width = 130
+    Caption = 'Количество углов:'
+    ParentColor = False
+    OnClick = Label1Click
+  end
+  object Label2: TLabel
+    Left = 39
+    Height = 20
+    Top = 24
+    Width = 140
+    Caption = 'Радиус окружности:'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 416
+    Height = 68
+    Top = 16
+    Width = 171
+    Caption = 'Расчитать периметр'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Label3: TLabel
+    Left = 16
+    Height = 20
+    Top = 104
+    Width = 163
+    Caption = 'Результат вычислений:'
+    ParentColor = False
+  end
+  object Results: TMemo
+    Left = 16
+    Height = 280
+    Top = 136
+    Width = 571
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Right = 1
+    BorderSpacing.Bottom = 1
+    OnChange = ResultsChange
+    TabOrder = 3
+  end
+  object MainMenu1: TMainMenu
+    top = 408
+    object MenuItem1: TMenuItem
+      Caption = 'Файл'
+      OnClick = MenuItem1Click
+      object fileopen: TMenuItem
+        Caption = 'Открыть'
+        OnClick = fileopenClick
+      end
+      object FileSave: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = FileSaveClick
+      end
+      object FileSaveData: TMenuItem
+        Caption = 'Сохранить отчёт'
+        OnClick = FileSaveDataClick
+      end
+      object FormCreate1: TMenuItem
+        Caption = 'Очистка поля вывода'
+        OnClick = FormCreate1Click
+      end
+    end
+    object Spravka: TMenuItem
+      Caption = 'Справка'
+      OnClick = SpravkaClick
+    end
+    object ExitProgram: TMenuItem
+      Caption = 'Выход'
+      OnClick = ExitProgramClick
+    end
+  end
+  object OD1: TOpenDialog
+    left = 32
+    top = 408
+  end
+  object SD2: TSaveDialog
+    Filter = 'name|*.txt'
+    left = 64
+    top = 408
+  end
+  object SD1: TSaveDialog
+    left = 96
+    top = 408
+  end
+end
